@@ -15,7 +15,7 @@ https://www.postman.com/downloads/
 
 https://chromewebstore.google.com/detail/talend-api-tester-free-ed/aejoelaoggembcahagimdiliamlcdmfm
 
-Project 1:  Load “holidays1.csv file and display List of Holidays in Mar 2024 without using Database
+<h2>Project 1:</h2>  Load “holidays1.csv file and display List of Holidays in Mar 2024 without using Database
 
 Create Project Project1 - Spring Starter Project - add dependencies ‘Spring Web’ , with ‘rest1’ as package.  Package Type: “Maven”.  Java: 17
 
