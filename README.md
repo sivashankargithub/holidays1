@@ -41,10 +41,13 @@ Load “holidays1.csv file and display List of Holidays in Mar 2024 using MySQL 
 3. Create a HolidayEntity2.java class file.
 
    	@Entity
+   
 	Table(name=”holidays”) 
 
 4. Within the class
+
 	 @Id
+
 	 @GeneratedType(strategy=GenerationType.IDENTITY)
  
 5. Outline the attributes of the table -id, holidayname, date1, day1
@@ -58,37 +61,46 @@ Load “holidays1.csv file and display List of Holidays in Mar 2024 using MySQL 
 9. Create HolidayController2.java class file
 
 	@RestController
-	Within the class
+
+10. Within the class
  
 		@.Autowired
+
 		HolidayRepo2 hr2;    (reference of repository)
 
 		@PostMapping(“/holidays/loadData/{fname}”)
+
 		Define a method to load data from file (“holidays1.csv”) and save it to the database using
-  
-hr.save(new HolidayEntity2(param1, param2, param3)). Use @PathVariable to pick up the file name from the URL
+
+11. hr.save(new HolidayEntity2(param1, param2, param3)). Use @PathVariable to pick up the file name from the URL
 
 		@GetMapping(“/holidays/2024”)
+
 		Define a method to pull data from the MySQL database and display it as a list one below the other using hr.findAll()
 
 		@GetMapping(“holidays/2024/{month1}”)
+
 		Define a method to pull data only for a specific month of a specific year and display it as a list one below the other using hr2.findByMonth(). 
   
-The following query may be written in the Repo interface.
+12. The following query may be written in the Repo interface.
 
 @Query(value=”select * from holidays where month(date1)=3”,nativeQuery=true)
 
-In resources,in application.properties, add the following lines
+13. In resources,in application.properties, add the following lines
 
 spring.application.name=REST2
+
 spring.datasource.url:jdbc:mysql://localhost:3306/db1
+
 spring.datasource.username:root
+
 spring.datasource.password:root
+
 spring.jpa.hibernate.ddl-auto=create
 
-Open MySQL, create database db1,  use db1.
+14. Open MySQL, create database db1,  use db1.
 
-In POSTMAN, create a collection called holidays. Create following requests
+15. In POSTMAN, create a collection called holidays. Create following requests
 
 POST - http://localhost:8080/holidays/loadfile/holiday1.csv
 
