@@ -88,15 +88,15 @@ Load “holidays1.csv file and display List of Holidays in Mar 2024 using MySQL 
 
 13. In resources,in application.properties, add the following lines
 
-spring.application.name=REST2
+ spring.application.name=REST2
 
-spring.datasource.url:jdbc:mysql://localhost:3306/db1
+ spring.datasource.url:jdbc:mysql://localhost:3306/db1
 
-spring.datasource.username:root
+ spring.datasource.username:root
 
-spring.datasource.password:root
+ spring.datasource.password:root
 
-spring.jpa.hibernate.ddl-auto=create
+ spring.jpa.hibernate.ddl-auto=create
 
 14. Open MySQL, create database db1,  use db1.
 
