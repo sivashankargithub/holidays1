@@ -21,12 +21,16 @@ Load “holidays1.csv file and display List of Holidays in Mar 2024 without usin
 2. Create Package ‘pkg1’ under project1
 
 3. Create HolidayController1.java class file
+
 @RestController
-Within the class
+
+4. Within the class
 
 	@GetMapping(“/holidays/2024”)
+ 
 	Define a method using File, Scanner, read each line, concatenate into a list separated by “\n” and return it in the method.
-Test using Browser, Postman or Talend by pointing to URL http://localhost:8080/holidays/2024
+
+5. Test using Browser, Postman or Talend by pointing to URL http://localhost:8080/holidays/2024
 
 Project Link : https://github.com/sivashankargithub/holidays1/tree/main/Project1
 
@@ -64,46 +68,46 @@ Load “holidays1.csv file and display List of Holidays in Mar 2024 using MySQL 
 
 10. Within the class
  
-		@.Autowired
+	@.Autowired
 
-		HolidayRepo2 hr2;    (reference of repository)
+	HolidayRepo2 hr2;    (reference of repository)
 
-		@PostMapping(“/holidays/loadData/{fname}”)
+	@PostMapping(“/holidays/loadData/{fname}”)
 
-		Define a method to load data from file (“holidays1.csv”) and save it to the database using
+	Define a method to load data from file (“holidays1.csv”) and save it to the database using
 
 11. hr.save(new HolidayEntity2(param1, param2, param3)). Use @PathVariable to pick up the file name from the URL
 
-		@GetMapping(“/holidays/2024”)
+	@GetMapping(“/holidays/2024”)
 
-		Define a method to pull data from the MySQL database and display it as a list one below the other using hr.findAll()
+12. Define a method to pull data from the MySQL database and display it as a list one below the other using hr.findAll()
 
-		@GetMapping(“holidays/2024/{month1}”)
+	@GetMapping(“holidays/2024/{month1}”)
 
-		Define a method to pull data only for a specific month of a specific year and display it as a list one below the other using hr2.findByMonth(). 
+	Define a method to pull data only for a specific month of a specific year and display it as a list one below the other using hr2.findByMonth(). 
   
-12. The following query may be written in the Repo interface.
+13. The following query may be written in the Repo interface.
 
 @Query(value=”select * from holidays where month(date1)=3”,nativeQuery=true)
 
-13. In resources,in application.properties, add the following lines
+14. In resources,in application.properties, add the following lines
 
- spring.application.name=REST2
+ 	spring.application.name=REST2
 
- spring.datasource.url:jdbc:mysql://localhost:3306/db1
+ 	spring.datasource.url:jdbc:mysql://localhost:3306/db1
 
- spring.datasource.username:root
+ 	spring.datasource.username:root
 
- spring.datasource.password:root
+ 	spring.datasource.password:root
 
  spring.jpa.hibernate.ddl-auto=create
 
-14. Open MySQL, create database db1,  use db1.
+15. Open MySQL, create database db1,  use db1.
 
-15. In POSTMAN, create a collection called holidays. Create following requests
+16. In POSTMAN, create a collection called holidays. Create following requests
 
-POST - http://localhost:8080/holidays/loadfile/holiday1.csv
+	POST - http://localhost:8080/holidays/loadfile/holiday1.csv
 
-GET - http://localhost:8080/holidays/2024
+	GET - http://localhost:8080/holidays/2024
 
-GET - http://localhost:8080/holidays/2024/3
+	GET - http://localhost:8080/holidays/2024/3
