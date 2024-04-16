@@ -30,29 +30,32 @@ Test using Browser, Postman or Talend by pointing to URL http://localhost:8080/h
 
 Project Link : https://github.com/sivashankargithub/holidays1/tree/main/Project1
 
-Project 2:  Load “holidays1.csv file and display List of Holidays in Mar 2024 using MySQL Database
+<h2>Project 2:</h2>  
+
+Load “holidays1.csv file and display List of Holidays in Mar 2024 using MySQL Database
   
-Create Project Project2 - Spring Starter Project - add dependencies ‘Spring Web’ , ‘Spring Data JPA’, ‘MySQL Driver’ with ‘rest1’ as package.  Package Type: “Maven”.  Java: 17
+1. Create Project Project2 - Spring Starter Project - add dependencies ‘Spring Web’ , ‘Spring Data JPA’, ‘MySQL Driver’ with ‘rest1’ as package.  Package Type: “Maven”.  Java: 17
 
-Create Package ‘pkg1’ under project2
+2. Create Package ‘pkg1’ under project2
 
-Create a HolidayEntity2.java class file. 
+3. Create a HolidayEntity2.java class file.
 
-@Entity
-@Table(name=”holidays”) 
-Within the class
-	@Id
-	@GeneratedType(strategy=GenerationType.IDENTITY)
+   	@Entity
+	Table(name=”holidays”) 
+
+4. Within the class
+	 @Id
+	 @GeneratedType(strategy=GenerationType.IDENTITY)
  
-Outline the attributes of the table -id, holidayname, date1, day1
+5. Outline the attributes of the table -id, holidayname, date1, day1
 
-Right Click, Source - Generate Getters and Setters
+6. Right Click, Source - Generate Getters and Setters
 
-Right Click Source - Generate Constructor with Fields
+7. Right Click Source - Generate Constructor with Fields
 
-Create HolidayRepo2.java interface file extends JpaRepository<HolidayEntity2, Integer>
+8. Create HolidayRepo2.java interface file extends JpaRepository<HolidayEntity2, Integer>
 
-Create HolidayController2.java class file
+9. Create HolidayController2.java class file
 
 	@RestController
 	Within the class
