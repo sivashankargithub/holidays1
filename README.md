@@ -28,3 +28,5 @@ Within the class
 	@GetMapping(“/holidays/2024”)
 	Define a method using File, Scanner, read each line, concatenate into a list separated by “\n” and return it in the method.
 Test using Browser, Postman or Talend by pointing to URL http://localhost:8080/holidays/2024
+
+Project Link : https://github.com/sivashankargithub/holidays1/tree/main/Project1
